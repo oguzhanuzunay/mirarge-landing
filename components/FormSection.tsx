@@ -7,7 +7,7 @@ const FormSection = () => {
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-8">
           <p className="text-lg text-gray-700 mb-6">
-            Fuar'da bizimle tanıştığınız için teşekkür ederiz! Şimdi iletişim bilgilerinizi bırakın,
+            Fuar&apos;da bizimle tanıştığınız için teşekkür ederiz! Şimdi iletişim bilgilerinizi bırakın,
             size özel teklifimizi gönderelim.
           </p>
         </div>
