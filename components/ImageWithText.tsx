@@ -1,5 +1,6 @@
 'use client';
 
+import { Check } from 'lucide-react';
 import Image from 'next/image';
 
 interface ImageWithTextProps {
@@ -8,6 +9,7 @@ interface ImageWithTextProps {
   description: string;
   imagePosition: 'left' | 'right';
   altText?: string;
+  features: string[];
 }
 
 const ImageWithText = ({
@@ -16,6 +18,7 @@ const ImageWithText = ({
   description,
   imagePosition = 'left',
   altText = 'Product Image',
+  features = [],
 }: ImageWithTextProps) => {
   return (
     <section className="min-h-screen w-full relative">
@@ -29,7 +32,8 @@ const ImageWithText = ({
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />{' '}
+        {/* Gelişmiş overlay */}
       </div>
 
       {/* Content */}
@@ -42,8 +46,32 @@ const ImageWithText = ({
           }`}
         >
           <div className={`max-w-xl ${imagePosition === 'left' ? 'md:ml-auto' : 'md:mr-auto'}`}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">{title}</h2>
-            <p className="text-lg md:text-xl text-gray-100">{description}</p>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-white drop-shadow-lg">
+              {title}
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-6 sm:mb-8 drop-shadow-md">
+              {description}
+            </p>
+
+            <div
+              className={`space-y-3 sm:space-y-4 ${
+                imagePosition === 'right' ? 'items-end' : 'items-start'
+              }`}
+            >
+              {features.map((feature, idx) => (
+                <div
+                  key={idx}
+                  className={`flex items-center gap-2 sm:gap-3 text-white drop-shadow-md ${
+                    imagePosition === 'right' ? 'flex-row-reverse' : 'flex-row'
+                  }`}
+                >
+                  <div className="bg-blue-500 rounded-full p-1 sm:p-1.5 flex-shrink-0 shadow-lg">
+                    <Check className="w-3 h-3 sm:w-4 sm:h-4" />
+                  </div>
+                  <span className="text-sm sm:text-base md:text-lg font-medium">{feature}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

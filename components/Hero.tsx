@@ -11,7 +11,7 @@ interface HeroProps {
 
 const Hero = ({
   backgroundType = 'video',
-  backgroundSrc = 'https://player.vimeo.com/external/459863027.sd.mp4?s=d2b3bcc2c5121a8f00cd32ec6b7ebbb1b646b5db&profile_id=164&oauth2_token_id=57447761',
+  backgroundSrc,
   title = 'Yenilikçi Çözümler, Güvenilir Ortaklık',
   subtitle = "Fuar'da tanıştığımız değerli misafirlerimiz için özel fırsatlar sunuyoruz",
 }: Partial<HeroProps>) => {
@@ -35,7 +35,7 @@ const Hero = ({
           </video>
         ) : (
           <Image
-            src={backgroundSrc}
+            src={backgroundSrc || ''}
             alt="Background"
             fill
             className="object-cover"
@@ -56,7 +56,7 @@ const Hero = ({
           href="#form"
           className="inline-block bg-white text-blue-900 px-8 py-4 rounded-full text-lg font-semibold transition-all hover:scale-105 hover:shadow-lg hover:bg-gray-100"
         >
-          Özel Teklifimizi Alın
+          Sadece fuara özel avantajlı paketler sizi bekliyor..
         </a>
       </div>
 

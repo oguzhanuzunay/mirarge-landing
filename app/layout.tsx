@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poiret_One } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const poiretOne = Poiret_One({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poiret',
+});
 
 export const metadata: Metadata = {
   title: 'Fuar Özel Teklif - Şirketiniz',
@@ -13,9 +18,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="tr"
-      className="scroll-smooth"
+      className={`scroll-smooth ${poiretOne.variable}`}
     >
-      <body className={inter.className}>{children}</body>
+      <body className={poiretOne.className}>{children}</body>
     </html>
   );
 }

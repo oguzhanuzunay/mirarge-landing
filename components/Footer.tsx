@@ -10,24 +10,21 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-2" />
-                <span>+90 (212) XXX XX XX</span>
+                <span>+90(212) 886 5741X</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2" />
-                <span>info@sirketiniz.com</span>
+                <span>info@mirprekast.com</span>
               </li>
               <li className="flex items-center">
                 <MapPin className="w-5 h-5 mr-2" />
-                <span>İstanbul, Türkiye</span>
+                <span>Atatürk Mah. Adnan Menderes Cad. No:6 Esenyurt İstanbul</span>
               </li>
             </ul>
           </div>
 
           <div className="text-sm">
-            <p className="mb-4">
-              Şirketimiz, iklimlendirme sektöründe yenilikçi çözümler sunarak müşterilerimizin
-              konfor ve memnuniyetini en üst düzeyde tutmayı hedeflemektedir.
-            </p>
+            <p className="mb-4">Dizaynım bir Mir Holding Kuruluşudur</p>
             <p className="text-gray-400">
               © {new Date().getFullYear()} Şirketiniz. Tüm hakları saklıdır.
             </p>

@@ -12,23 +12,39 @@ export default function Home() {
       <Hero
         backgroundType="video"
         backgroundSrc="/videos/herovideo.mp4"
-        title="Yenilikçi Çözümler, Güvenilir Ortaklık"
-        subtitle="Fuar'da tanıştığımız değerli misafirlerimiz için özel fırsatlar sunuyoruz"
+        title="Evinizi Değil, Yaşam Biçiminizi Seçin"
+        subtitle="Fuar'da tanıştığımız değerli misafirlerimiz için özel hazırlanmış, doğayla uyumlu ve ileri teknolojiyle donatılmış yaşam alanlarımızı şimdi keşfedin."
       />
       <FullPageSlider />
       <ImageWithText
-        imageUrl="https://picsum.photos/1600/900"
-        title="Yenilikçi Teknoloji"
-        description="En son teknoloji ile donatılmış klimalarımız, yaşam alanlarınızı daha konforlu hale getiriyor. Akıllı sensörler ve enerji tasarruf özellikleri ile hem konfor hem tasarruf sağlıyoruz."
+        imageUrl="/images/dizayn.jpg"
+        title="Gizli Kahraman: Akıllı Mühendislik"
+        description="Gözle görünmeyen detaylar, hissettiklerinizin mimarıdır. Mir’in bilimsel altyapısı sayesinde yapılarınız sadece güzel değil, düşünen sistemlere sahip. Akıllı sensörler, enerji tasarrufu sağlayan ısı yönetimi, doğayla entegre su sistemleri ve çok katmanlı yalıtım çözümleriyle yaşam alanınız sizi anlar."
         imagePosition="left"
         altText="Modern klima sistemi"
+        features={[
+          'Güneş paneli destekli çatı sistemleri 🌞',
+          'Zemin ısıtma – ısı dengesini kendi kuran sistem 🌡️',
+          'Taş yünü ile bütünleşik dış kabuk yalıtımı 🌀',
+          'Otomatik ısı ve nem dengeleyici akıllı sensörler 📊',
+          'Gri su & atık su dönüşüm altyapısı 🔁',
+        ]}
       />
       <ImageWithText
-        imageUrl="https://picsum.photos/1600/901"
-        title="Üstün Performans"
-        description="A+++ enerji sınıfı ile maksimum verimlilik sunan klimalarımız, minimum enerji tüketimi ile maksimum performans sağlar. Özel filtre teknolojisi sayesinde en sağlıklı havayı sizlere sunar."
+        imageUrl="/images/ustun_performans_gorseli.JPG"
+        title="Sadeleş, Güçlen: Performans Sessizlikte Gizli"
+        description="Enerji verimliliği yalnızca faturaları azaltmaz, yaşam kalitenizi artırır.
+A+++ enerji sınıfı sistemlerimizle hem daha az tüketiyor, hem daha çok huzur yaşıyorsunuz.
+Isı, ses, ışık ve nem kontrolünü tek merkezden yöneten yapılarla artık sadece yaşamakla kalmıyor, gerçekten dinleniyorsunuz."
         imagePosition="right"
         altText="İç mekan klima ünitesi"
+        features={[
+          '⚡ A+++ enerji sınıfı sistemlerle %33 daha az tüketim',
+          '🔇 Taş yünü destekli ses izolasyonu',
+          '🌬️ Merkezi ısı-soğutma sistemiyle her alanda homojen iklim',
+          '🌍 Sürdürülebilir enerji ve su yönetimi',
+          '🧘 Sessiz çalışan sistem altyapısı ile zihinsel konfor',
+        ]}
       />
       <Slider />
       <TrustSection />
