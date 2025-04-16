@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  webpack: (config, { isServer }) => {
+    // PDF.js için canvas modülünü yoksay
+    if (isServer) {
+      config.externals.push({
+        canvas: 'commonjs canvas',
+      });
+    }
+
+    return config;
+  },
   images: {
     remotePatterns: [
       {
@@ -9,6 +19,7 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+    domains: ['i.pravatar.cc'],
   },
 };
 

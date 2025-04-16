@@ -1,10 +1,6 @@
 'use client';
 
-import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
-import { Viewer, Worker } from '@react-pdf-viewer/core';
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
-import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 interface PDFViewerProps {
   isOpen: boolean;
@@ -13,22 +9,30 @@ interface PDFViewerProps {
 }
 
 const PDFViewer = ({ isOpen, onClose, fileUrl }: PDFViewerProps) => {
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
-
   return (
     <Dialog
       open={isOpen}
       onOpenChange={onClose}
     >
-      <DialogContent className="max-w-[90vw] max-h-[90vh]">
-        <DialogTitle className="sr-only">Döküman Görüntüleyici</DialogTitle>
-        <div className="h-[80vh] w-full">
-          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-            <Viewer
-              fileUrl={fileUrl}
-              plugins={[defaultLayoutPluginInstance]}
-            />
-          </Worker>
+      <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+        <div className="w-full h-[80vh]">
+          <iframe
+            src={`${fileUrl}#toolbar=0`}
+            width="100%"
+            height="100%"
+            className="border-none"
+          >
+            <p>
+              PDF görüntüleyici yüklenemedi.{' '}
+              <a
+                href={fileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                PDF'i indir
+              </a>
+            </p>
+          </iframe>
         </div>
       </DialogContent>
     </Dialog>
