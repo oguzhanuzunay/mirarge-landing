@@ -29,7 +29,7 @@ const PDFViewer = ({ isOpen, onClose, fileUrl }: PDFViewerProps) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                PDF'i indir
+                PDF&apos;i indir
               </a>
             </p>
           </iframe>
