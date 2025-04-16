@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Poiret_One } from 'next/font/google';
+import { Poiret_One, Roboto } from 'next/font/google';
 import './globals.css';
 
-const poiretOne = Poiret_One({
+const poiretOne = Roboto({
   weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
@@ -12,7 +12,7 @@ const poiretOne = Poiret_One({
 export const metadata: Metadata = {
   title: 'Dizayn Yapı | Fuar Özel Teklif – Anisa, Maysa, Koza',
   description:
-    'Fuarda tanıştığımız değerli ziyaretçilerimiz için özel fırsatlar: Anisa ile güvenli yaşam, Maysa ile minimal konfor, Koza ile doğada özgürlük. Hemen inceleyin!',
+    'Fuarda tanıştığımız değerli ziyaretçilerimiz için özel fırsatlar: Anisa ile güvenli yaşam, Maysa ile minimal konfor, Koza ile doğada özgürlük. Hemen inceleyin',
 };
 
 

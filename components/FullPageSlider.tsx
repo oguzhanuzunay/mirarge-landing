@@ -90,34 +90,39 @@ const FullPageSlider = () => {
                 backgroundPosition: 'center',
               }}
             >
-              <div className="absolute inset-0 bg-black bg-opacity-50" />
-              <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
-                <div className="max-w-3xl">
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">
-                    {slide.title}
-                  </h2>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-100 mb-6 drop-shadow-md line-clamp-3 sm:line-clamp-none">
-                    {slide.description}
-                  </p>
-                  <div className="space-y-3 mb-8">
-                    {slide.features.map((feature, idx) => (
-                      <div
-                        key={idx}
-                        className="flex items-center text-white"
-                      >
-                        <Check className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-blue-400" />
-                        <span className="text-sm sm:text-base drop-shadow-md">{feature}</span>
+              <div className="text-center z-10 px-4 max-w-4xl mx-auto">
+                <h2
+                  className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 ${slide.textColor} leading-tight`}
+                >
+                  {slide.title}
+                </h2>
+                <p
+                  className={`text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 ${slide.textColor} max-w-xl mx-auto leading-relaxed`}
+                >
+                  {slide.description}
+                </p>
+
+                <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
+                  {slide.features.map((feature, idx) => (
+                    <div
+                      key={idx}
+                      className="flex items-center gap-2 text-white justify-center"
+                    >
+                      <div className="bg-blue-500 rounded-full p-1 flex-shrink-0">
+                        <Check className="w-3 h-3 sm:w-4 sm:h-4" />
                       </div>
-                    ))}
-                  </div>
-                  <button
-                    onClick={() => handleVideoClick(slide.videoUrl)}
-                    className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 bg-blue-600 text-white rounded-lg text-sm sm:text-base font-semibold hover:bg-blue-700 transition-colors duration-200"
-                  >
-                    <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    Videoyu İzle
-                  </button>
+                      <span className="text-sm sm:text-base md:text-lg font-medium">{feature}</span>
+                    </div>
+                  ))}
                 </div>
+
+                <button
+                  onClick={() => handleVideoClick(slide.videoUrl)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full flex items-center justify-center mx-auto transition-colors duration-300 text-sm sm:text-base"
+                >
+                  <Play className="w-4 h-4 sm:w-6 sm:h-6 mr-2" />
+                  Videoyu İzle
+                </button>
               </div>
             </div>
           </SwiperSlide>
