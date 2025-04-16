@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Poiret_One, Roboto } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 
-const poiretOne = Roboto({
+const poiretOne = Poppins({
   weight: ['400'],
   subsets: ['latin'],
   display: 'swap',
