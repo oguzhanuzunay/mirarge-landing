@@ -249,7 +249,7 @@ const TrustSection = () => {
           </h2>
           <p className="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
             Minimalist misiniz, özgürlüğü mü arıyorsunuz, yoksa sevdiklerinizle huzurlu bir yaşam mı
-            istiyorsunuz? Mir Bina olarak sizi yalnızca bir yapı değil, yaşam tarzınıza uygun bir
+            istiyorsunuz? Dizaynım olarak sizi yalnızca bir yapı değil, yaşam tarzınıza uygun bir
             felsefeyle buluşturuyoruz. Teknolojiyi estetikle, mühendisliği doğayla, konforu
             sadelikle bir araya getiriyoruz.
           </p>

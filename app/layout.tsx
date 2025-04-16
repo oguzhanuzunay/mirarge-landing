@@ -10,9 +10,11 @@ const poiretOne = Poiret_One({
 });
 
 export const metadata: Metadata = {
-  title: 'Fuar Özel Teklif - Şirketiniz',
-  description: 'Fuar ziyaretçilerimiz için özel kampanyalar ve avantajlı fırsatlar.',
+  title: 'Dizayn Yapı | Fuar Özel Teklif – Anisa, Maysa, Koza',
+  description:
+    'Fuarda tanıştığımız değerli ziyaretçilerimiz için özel fırsatlar: Anisa ile güvenli yaşam, Maysa ile minimal konfor, Koza ile doğada özgürlük. Hemen inceleyin!',
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

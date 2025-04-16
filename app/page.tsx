@@ -19,7 +19,7 @@ export default function Home() {
       <ImageWithText
         imageUrl="/images/dizayn.jpg"
         title="Gizli Kahraman: Akıllı Mühendislik"
-        description="Gözle görünmeyen detaylar, hissettiklerinizin mimarıdır. Mir’in bilimsel altyapısı sayesinde yapılarınız sadece güzel değil, düşünen sistemlere sahip. Akıllı sensörler, enerji tasarrufu sağlayan ısı yönetimi, doğayla entegre su sistemleri ve çok katmanlı yalıtım çözümleriyle yaşam alanınız sizi anlar."
+        description="Gözle görünmeyen detaylar, hissettiklerinizin mimarıdır. Dizayn’ım bilimsel altyapısı sayesinde yapılarınız sadece güzel değil, düşünen sistemlere sahip. Akıllı sensörler, enerji tasarrufu sağlayan ısı yönetimi, doğayla entegre su sistemleri ve çok katmanlı yalıtım çözümleriyle yaşam alanınız sizi anlar."
         imagePosition="left"
         altText="Modern klima sistemi"
         features={[
