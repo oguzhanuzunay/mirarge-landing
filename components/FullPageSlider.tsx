@@ -1,7 +1,7 @@
 'use client';
 
 import { Check, Play } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
@@ -49,6 +49,20 @@ const slides = [
 const FullPageSlider = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   const handleVideoClick = (videoUrl: string) => {
     setCurrentVideo(videoUrl);
@@ -64,9 +78,9 @@ const FullPageSlider = () => {
       />
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
-        direction="vertical"
+        direction={isMobile ? 'horizontal' : 'vertical'}
         slidesPerView={1}
-        effect="fade"
+        effect={isMobile ? undefined : 'fade'}
         speed={1000}
         autoplay={{
           delay: 3000,
@@ -75,10 +89,12 @@ const FullPageSlider = () => {
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
-            return '<span class="' + className + ' bg-white"></span>';
+            return `<span class="${className} ${
+              isMobile ? 'bg-white !w-2 !h-2 !mx-1' : 'bg-white'
+            }" style="${isMobile ? 'margin: 0 4px;' : ''}"></span>`;
           },
         }}
-        className="h-full"
+        className={`h-full ${isMobile ? 'pb-10' : ''}`}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
